@@ -36,11 +36,7 @@ button{
   border-radius: 0;
   color: var(--text);
   font-family: inherit;
-
-  display: inline-flex;
-  align-items: center;
 }
-
 
 /* ===== HERO ===== */
 .hero img{
@@ -67,15 +63,6 @@ button{
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--nav-border);
 }
-
-/* ===== ACTIVE NAV (CSS-ONLY) ===== */
-body[data-page="home"] .navlink[href="index.html"],
-body[data-page="gallery"] .navlink[href="gallery.html"]{
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
 
 .navlink{
   text-decoration: none;
