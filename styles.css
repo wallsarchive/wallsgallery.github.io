@@ -269,9 +269,66 @@ body{
 
 /* ===== MOBILE ===== */
 @media (max-width: 860px){
-   body {
+
+  /* ===== Prevent sideways page scroll ===== */
+  body {
     overflow-x: hidden;
   }
+
+  /* ===== Change layout: sidebar becomes top bar ===== */
+  .gallery-layout{
+    grid-template-columns: 1fr;   /* remove left column */
+  }
+
+  .sidebar{
+    border-right: 0;
+    border-bottom: 1px solid var(--nav-border);
+    padding: 10px 0;
+  }
+
+  /* ===== Make artist list horizontal scroll ===== */
+  .sidebar-inner{
+    position: static;
+    padding: 0 var(--page-pad);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .filter-list{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .filterbtn{
+    white-space: nowrap;
+    padding: 8px 12px;
+  }
+
+  /* ===== Works grid below (2 per row, vertical scroll only) ===== */
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridwrap{
+    overflow-x: hidden;
+  }
+
+  .thumb,
+  .thumb img,
+  .ytwrap{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
   /* ===== FILTER BAR (keep horizontal scroll) ===== */
   .sidebar-inner{
