@@ -297,5 +297,20 @@ body{
   .filterbtn{
     padding: 8px 10px;
   }
+  /* ===== SHARED IMAGE VIEW PAGES (/view/*.html) ===== */
+.viewer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px var(--page-pad) 28px;
+}
+
+.viewer img {
+  max-width: 96vw;
+  max-height: 86vh; /* leaves room for the sticky nav */
+  display: block;
+}
+
 }
 
