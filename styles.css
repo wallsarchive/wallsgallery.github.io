@@ -37,6 +37,32 @@ body{
 }
 
 /* ===== NAV ===== */
+/* ===== ACTIVE NAV LINK ===== */
+.navlink.is-active{
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ===== FIX MOBILE LINK COLORS ===== */
+.navlink,
+.navlink:visited,
+.navlink:active,
+.navlink:focus{
+  color: var(--text);
+}
+
+/* Remove iOS blue tap highlight */
+.navlink{
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navlink:focus-visible{
+  outline: 2px solid rgba(0,0,0,0.4);
+  outline-offset: 4px;
+}
+
+
 .topnav{
   position: sticky;
   top: 0;
