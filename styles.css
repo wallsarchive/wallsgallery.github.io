@@ -63,6 +63,36 @@ button{
   -webkit-backdrop-filter: blur(10px)
 }
 
+/* ===== CENTERED COUNTDOWN ===== */
+.countdown-center{
+  min-height: calc(100vh - 72px); /* accounts for nav height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.countdown-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.countdown-label{
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.countdown-time{
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
 /* ===== ACTIVE NAV (CSS-ONLY) ===== */
 body[data-page="home"] .navlink[href="index.html"],
 body[data-page="gallery"] .navlink[href="gallery.html"]{
@@ -285,37 +315,6 @@ body[data-page="gallery"] .navlink[href="gallery.html"]{
   .gallery-layout{
     grid-template-columns: 1fr;
   }
-
-/* ===== CENTERED COUNTDOWN ===== */
-.countdown-center{
-  min-height: calc(100vh - 72px); /* accounts for nav height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.countdown-bar{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-.countdown-label{
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.65;
-}
-
-.countdown-time{
-  font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1;
-}
-
 
   .sidebar{
     border-right: 0;
