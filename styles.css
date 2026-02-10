@@ -286,6 +286,10 @@ body[data-page="gallery"] .navlink[href="gallery.html"]{
     grid-template-columns: 1fr;
   }
 
+  .countdown-bar{
+  font-size: 0.9rem;
+}
+  
   .sidebar{
     border-right: 0;
     border-bottom: 1px solid var(--nav-border);
