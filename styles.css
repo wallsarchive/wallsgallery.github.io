@@ -308,6 +308,12 @@ body[data-page="gallery"] .navlink[href="gallery.html"]{
     max-width: 100vw;
   }
 
+  .hero img{
+    height: 45vh;        /* much shorter */
+    min-height: 280px;   /* prevents it from collapsing */
+    object-position: center top; /* better faces/framing */
+  }
+  
   .filter-list{
     display: flex;
     flex-direction: row;
