@@ -136,6 +136,32 @@ function renderHome() {
   });
 }
 
+// ===== HERO IMAGE SWAP =====
+function setupHeroSwap(){
+  const hero = document.getElementById("heroImage");
+  if (!hero) return;
+
+  let swapped = false;
+
+  hero.addEventListener("click", () => {
+    if (swapped) return;
+
+    const newSrc = hero.dataset.altSrc;
+    if (!newSrc) return;
+
+    swapped = true;
+
+    hero.classList.add("is-fading");
+
+    setTimeout(() => {
+      hero.src = newSrc;
+      hero.classList.remove("is-fading");
+      hero.style.cursor = "default"; // no longer clickable
+    }, 450);
+  });
+}
+
+
 // ===== GALLERY =====
 let currentFilter = "all";
 let currentWork = null;
