@@ -136,6 +136,32 @@ function renderHome() {
   });
 }
 
+// ===== HEART PARTICLES =====
+function spawnHearts(x, y){
+  const hearts = ["💗","💖","💘","💕","💞"];
+
+  for(let i = 0; i < 14; i++){
+    const heart = document.createElement("div");
+    heart.className = "heart-particle";
+    heart.textContent =
+      hearts[Math.floor(Math.random() * hearts.length)];
+
+    // random movement
+    heart.style.left = x + "px";
+    heart.style.top = y + "px";
+    heart.style.setProperty("--driftX", (Math.random()*80 - 40) + "px");
+    heart.style.setProperty("--rise", (Math.random()*60) + "px");
+
+    // slight size variation
+    heart.style.fontSize = (14 + Math.random()*12) + "px";
+
+    document.body.appendChild(heart);
+
+    // cleanup
+    setTimeout(() => heart.remove(), 1600);
+  }
+}
+
 // ===== HERO IMAGE SWAP =====
 function setupHeroSwap(){
   const hero = document.getElementById("heroImage");
